@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 3.3 Kalorien Rechner</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    
+    <section>
+        <form action="" onsubmit="return false">
+            <h1>Kalorien rechner</h1>
+            <ddiv:ntiv class="informations">
+                <label for="bodyheight">Körpergröße</label>
+                <input type="number" name="height" id="bodyheightcm">
+                <label for="age">Alter</label>
+                <input type="number" name="patientage" id="ageOfCustomer">
+                <label for="weight">Gewicht</label>
+                <input type="number" name="patientweight" id="weightOfCustomer">
+            </div>
+            <div>
+                <h2>Körperbau</h2>
+                <input type="radio" name="genderoption" id="genderMen">
+                <label for="age">Männlich</label>
+                <input type="radio" name="genderoption" id="genderWomen">
+                <label for="age">Weiblich</label>
+            </div>
+            <div>
+                <h3>Arbeits- u- Freizeitaktivität</h3>
+                <select name="activity" id="freetimeactivity">
+                    <option value="0">Wähle eine Option aus<span>*</span></option>
+                    <option value="1">Schlafen</option>
+                    <option value="2">Nur Sitzen oder Liegen</option>
+                    <option value="3">Ausschließlich sitzende Tätigkeit mit wenig oder keiner körperlichen Aktivität in der Freizeit, z.B. Büroarbeit</option>
+                    <option value="4">Sitzende Tätigkeit mit zeitweilig gehender oder stehender Tätigkeit, z.B. Studierende, Fließbandarbeiter, Laboranten, Kraftfahrer</option>
+                    <option value="5">Überwiegend gehende oder stehende Tätigkeit, z.B. Verkäufer, Kellner, Handwerker, Mechaniker, Hausfrauen</option>
+                    <option value="6">Körperlich anstrengende Arbeit</option>
+                </select>
+                <input type="button" value="Berechne" onclick="calculateCal()">
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>kcal</th>
+                        <th>kJ</th>
+                    </tr>
+                    <tr>
+                        <td>Grundumsatz</td>
+                        <td id="kcal"></td>
+                        <td id="kJ"></td>
+                    </tr>
+                    <tr>
+                        <td>Gesamtumsatz</td>
+                        <td id="totalKcal"></td>
+                        <td id="totalKJ"></td>
+                    </tr>
+                </table>
+                <p>Das Ergebnis des Rechners sollten Sie als Orientierungswert ansehen, da es verschiedene Fehlermöglichkeiten gibt - z. B. abweichender Grundumsatz, falsche Zeiteinschätzung etc.</p>
+            </div>
+        </form>
+
+    </section>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
